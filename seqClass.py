@@ -30,4 +30,4 @@ if args.motif:
   if args.motif in args.seq :
     print("TROUVé")
   else:
-    print("NOT FOUND")
+    print("pas trouvé")
