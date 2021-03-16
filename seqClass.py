@@ -3,6 +3,7 @@
 import sys, re
 from argparse import ArgumentParser
 
+# Here we define arguments that we will provide in the shell
 parser = ArgumentParser(description = 'Classify a sequence as DNA or RNA')
 parser.add_argument("-s", "--seq", type = str, required = True, help = "Input sequence")
 parser.add_argument("-m", "--motif", type = str, required = False, help = "Motif")
@@ -24,6 +25,7 @@ if re.search('^[ACGTU]+$', args.seq):
 else:
     print ('The sequence is not DNA nor RNA')
 
+# This part look for the provided motif and tells whether or not it is in our sequence
 if args.motif:
   args.motif = args.motif.upper()
   print(f'Motif search enabled: looking for motif "{args.motif}" in sequence "{args.seq}"... ', end = '')
