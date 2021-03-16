@@ -15,7 +15,7 @@ args = parser.parse_args()
 args.seq = args.seq.upper()                 # Note we just added this line
 if re.search('^[ACGTU]+$', args.seq):
     if re.search('T', args.seq):
-        print ('The sequence is DNA')
+        print ('The phrase is DNA')
     elif re.search('U', args.seq):
         print ('The sequence is RNA')
     else:
